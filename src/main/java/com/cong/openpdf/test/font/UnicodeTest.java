@@ -1,4 +1,4 @@
-package com.cong.openpdf.test.fonts;
+package com.cong.openpdf.test.font;
 
 import com.lowagie.text.Document;
 import com.lowagie.text.Font;
