@@ -1,4 +1,4 @@
-package com.cong.openpdf.test.sse;
+package com.cong.openpdf.sse;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;

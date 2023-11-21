@@ -1,4 +1,4 @@
-package com.cong.openpdf.test.retrytest;
+package com.cong.openpdf.retrytest;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.retry.annotation.Retryable;

@@ -1,4 +1,4 @@
-package com.cong.openpdf.test;
+package com.cong.openpdf;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

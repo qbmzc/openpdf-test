@@ -1,4 +1,4 @@
-package com.cong.openpdf.test.sse;
+package com.cong.openpdf.sse;
 
 import lombok.Getter;
 import lombok.Setter;

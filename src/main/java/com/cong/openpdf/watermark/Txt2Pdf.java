@@ -33,7 +33,7 @@
  * A copy of the MPL license is bundled with the source code FYI.
  */
 
-package com.cong.openpdf.test.watermark;
+package com.cong.openpdf.watermark;
 
 import java.io.BufferedReader;
 import java.io.File;

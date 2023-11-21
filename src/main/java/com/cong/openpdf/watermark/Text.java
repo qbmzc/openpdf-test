@@ -11,7 +11,7 @@
  *
  *  
  */
-package com.cong.openpdf.test.watermark;
+package com.cong.openpdf.watermark;
 
 import java.io.FileOutputStream;
 import java.io.IOException;

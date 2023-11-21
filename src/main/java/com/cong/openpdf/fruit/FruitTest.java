@@ -1,4 +1,4 @@
-package com.cong.openpdf.test.fruit;
+package com.cong.openpdf.fruit;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;

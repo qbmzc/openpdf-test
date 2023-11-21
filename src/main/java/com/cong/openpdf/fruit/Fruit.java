@@ -1,4 +1,4 @@
-package com.cong.openpdf.test.fruit;
+package com.cong.openpdf.fruit;
 
 /**
  * @author cong

@@ -1,4 +1,4 @@
-package com.cong.openpdf.test.watermark;
+package com.cong.openpdf.watermark;
 
 import com.lowagie.text.pdf.BaseFont;
 import com.lowagie.toolbox.plugins.watermarker.Watermarker;

@@ -1,4 +1,4 @@
-package com.cong.openpdf.test;
+package com.cong.openpdf;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
