@@ -29,15 +29,27 @@ public class FontTestTest {
         System.out.println(fontMetrics.stringWidth("窗前明月光"));
     }
 
+    /**
+     * 已过时，不建议使用
+     * 
+     * @param fontName
+     * @param fontSize
+     * @return
+     */
     private static FontDesignMetrics getFdm(String fontName, Integer fontSize) {
         long currentTimeMillis = System.currentTimeMillis();
         FontDesignMetrics metrics = FontDesignMetrics
                 .getMetrics(new java.awt.Font(fontName, java.awt.Font.PLAIN, fontSize));
 
-        System.out.println(0+"_"+(System.currentTimeMillis() - currentTimeMillis));
+        System.out.println(0 + "_" + (System.currentTimeMillis() - currentTimeMillis));
         return metrics;
     }
 
+    /**
+     * 建议使用
+     * 
+     * @return
+     */
     private static FontMetrics getFontWithAndHeight() {
         long currentTimeMillis = System.currentTimeMillis();
         // 创建字体对象
@@ -56,20 +68,28 @@ public class FontTestTest {
         // int height = fontMetrics.getHeight();
         // 关闭图形对象
         g2d.dispose();
-        System.out.println(1+"_"+(System.currentTimeMillis() - currentTimeMillis));
+        System.out.println(1 + "_" + (System.currentTimeMillis() - currentTimeMillis));
         return fontMetrics;
     }
 
+    /**
+     * api已过时，不建议使用
+     * 
+     * @return
+     */
     private static FontMetrics getFontWithAndHeight2() {
         long currentTimeMillis = System.currentTimeMillis();
         // 创建字体对象
         java.awt.Font font = new java.awt.Font("sans-serif", java.awt.Font.PLAIN, 12);
         Toolkit toolkit = Toolkit.getDefaultToolkit();
         FontMetrics fontMetrics = toolkit.getFontMetrics(font);
-        System.out.println(2+"_"+(System.currentTimeMillis() - currentTimeMillis));
+        System.out.println(2 + "_" + (System.currentTimeMillis() - currentTimeMillis));
         return fontMetrics;
     }
 
+    /**
+     * 可以使用,耗时比1多一些
+     */
     private static void getFontWithAndHeight3() {
         long currentTimeMillis = System.currentTimeMillis();
 
@@ -78,22 +98,16 @@ public class FontTestTest {
 
         // 获取字体渲染上下文
         FontRenderContext fontRenderContext = new FontRenderContext(new AffineTransform(), true, true);
-
         // 获取字体的宽度
         String text = "Hello, World!";
-        int width = (int) font.getStringBounds(text, fontRenderContext).getWidth();
-
-        // 获取字体的高度
-        int height = (int) font.getStringBounds(text, fontRenderContext).getHeight();
-
-        LineMetrics lineMetrics = font.getLineMetrics("text", fontRenderContext);
-
-        float height2 = lineMetrics.getHeight();
-        System.out.println(height2);
+        double width2 = font.getStringBounds(text, fontRenderContext).getWidth();
+        Long width = Math.round(width2);
+        double h = font.getStringBounds(text, fontRenderContext).getHeight();
+        long height = Math.round(h);
         // 输出结果
         System.out.println("Width: " + width);
         System.out.println("Height: " + height);
-        System.out.println(3+"_"+(System.currentTimeMillis() - currentTimeMillis));
+        System.out.println(3 + "_" + (System.currentTimeMillis() - currentTimeMillis));
 
     }
 }
